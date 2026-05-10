@@ -1,7 +1,311 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tariq Ahmad - Lead Software Engineer | Cloud Architect">
+    <title>Tariq Ahmad - Resume</title>
+
+        <!-- Open Graph / LinkedIn / Social Media Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tariq-ahmad.github.io/">
+    <meta property="og:title" content="Tariq Ahmad - Lead Software Engineer & Cloud Architect">
+    <meta property="og:description" content="Exploring strategic engineering opportunities. Expert in Cloud Architecture, Microservices, and Agentic AI.">
+    <!-- This tells LinkedIn to look for the screenshot you just saved -->
+    <meta property="og:image" content="https://tariq-ahmad.github.io/preview.png">
+
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
 <body>
-    <h1>Welcome to My Landing Page</h1>
-    <p>This page is hosted on GitHub Pages!</p>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="prompt">&gt;</span> tariq_ahmad<span class="cursor-blink">_</span>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-menu">
+                    <li><a href="#about">// about</a></li>
+                    <li><a href="#experience">// experience</a></li>
+                    <li><a href="#skills">// skills</a></li>
+                    <li><a href="#achievements">// awards</a></li>
+                    <li><a href="#contact">// contact</a></li>
+                </ul>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="cyber-grid"></div>
+        <div class="hero-glow"></div>
+        
+        <div class="container hero-content">
+            
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                <span class="status-text">Open to strategic engineering conversations</span>
+            </div>
+
+            <h1 class="hero-title">Hi, I'm <span class="highlight">Tariq Ahmad</span></h1>
+            
+            <!-- JSON Style Subtitle -->
+            <div class="code-subtitle">
+                <span class="code-bracket">{</span>
+                <span class="code-key">"role"</span>: <span class="code-value">"Lead Software Engineer"</span>,
+                <span class="code-key">"specialty"</span>: <span class="code-value">"Backend, Cloud Architecture & Agentic AI"</span>
+                <span class="code-bracket">}</span>
+            </div>
+            
+            <!-- Dynamic Tech Ticker (Live Fetching) -->
+            <div class="tech-ticker-container">
+                <div class="tech-ticker" id="tech-ticker">
+                    <i class="fas fa-terminal"></i>
+                    <span id="ticker-term" class="ticker-term">Initializing...</span>
+                    <span class="ticker-separator">—</span>
+                    <span id="ticker-desc" class="ticker-desc">Fetching live definition...</span>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/tariq-ahmad" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/tariq-ahmad" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+       <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content glass-card">
+                <p>I am a <strong>Lead Software Engineer and Cloud Architect</strong> with nearly 7 years of experience building scalable, event-driven enterprise systems. I specialize in bridging complex business requirements with robust, cloud-native microservice architectures across the <strong>Java/Spring Boot</strong> stack.</p>
+                <p>Beyond day-to-day coding, my focus is on setting architectural standards, mentoring engineering teams, and guiding digital transformations. Most recently, I've been exploring the integration of <strong>Agentic AI systems</strong> - authoring blueprints and building proofs-of-concept to solve real-world enterprise challenges.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Experience Section -->
+    <section id="experience" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Effective Jun 2026</div>
+                    <div class="timeline-content glass-card">
+                        <h3>Lead Software Engineer (Senior Consultant, AI & Engineering)</h3>
+                        <h4>Deloitte</h4>
+                        <ul>
+                            <li>Elevated to Lead Engineer to oversee high-scale architectural design and technical roadmaps for critical AI and engineering initiatives.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Jun 2022 - May 2026</div>
+                    <div class="timeline-content glass-card">
+                        <h3>Senior Software Engineer (Consultant, AI & Engineering)</h3>
+                        <h4>Deloitte</h4>
+                        <ul>
+                            <li>Led a 6-member engineering squad delivering scalable, cloud-native backend services for enterprise-scale Supply Chain, Finance, and P2P domains.</li>
+                            <li>Oversaw the delivery of a 70+ microservice ecosystem, defining service boundaries and core architectural patterns to ensure high availability and scalability.</li>
+                            <li>Architected resilient event-driven systems (Kafka, GCP Pub/Sub) that improved throughput by 40%; implemented dead-letter queues (DLQs) and retry patterns to achieve a 99.95% success rate while significantly reducing service coupling.</li>
+                            <li>Engineered an org-wide "Microservice Starter Kit" featuring centralized logging, PII masking, and encryption, driving adoption across 5+ teams and reducing boilerplate code by 30%.</li>
+                            <li>Defined GCP integration roadmaps in collaboration with architecture leadership to drive a multi-year digital transformation strategy.</li>
+                            <li>Pioneered the exploration of Agentic Systems by developing high-impact POCs and authoring the strategic architectural blueprint for enterprise AI adoption.</li>
+                             <li>Governed engineering excellence by mentoring junior engineers in System Design, TDD, and backend reliability to promote continuous skill development.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Aug 2019 - May 2022</div>
+                    <div class="timeline-content glass-card">
+                        <h3>Cloud Engineering Analyst</h3>
+                        <h4>Deloitte</h4>
+                        <ul>
+                            <li>Developed backend services and automation scripts using Python across AWS and GCP environments to support cloud-native enterprise solutions.</li>
+                            <li>Engineered a cost-efficient, highly available Boomi runtime on AWS, leveraging Docker and Kubernetes to ensure scalable and resilient container orchestration.</li>
+                            <li>Configured system monitoring and alerting using Datadog to improve infrastructure visibility and accelerate incident response times for cloud applications.</li>
+                            <li>Selected for the prestigious Deloitte Cloud Developer Explorer program (top 30 globally), receiving advanced architectural training across a broad spectrum of cloud technologies.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="skills-grid">
+                 <div class="skill-category glass-card">
+                    <h3><i class="fas fa-cogs"></i> Architecture & Design</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Microservices</span>
+                        <span class="tag">Distributed Systems</span>
+                        <span class="tag">Event-Driven Architecture</span>
+                        <span class="tag">API-First Design</span>
+                         <span class="tag">System Design</span>
+                    </div>
+                </div>
+                 <div class="skill-category glass-card">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Kotlin</span>
+                    </div>
+                </div>
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-server"></i> Backend & Integration</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Spring Boot</span>
+                        <span class="tag">REST APIs</span>
+                        <span class="tag">Boomi (iPaaS)</span>
+                        <span class="tag">SAP</span>
+                        <span class="tag">Workday</span>
+                        <span class="tag">Coupa</span>
+                    </div>
+                </div>
+                 <div class="skill-category glass-card">
+                    <h3><i class="fas fa-brain"></i> Gen AI & Agentic Systems</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Amazon Bedrock</span>
+                        <span class="tag">GCP Agentic AI</span>
+                        <span class="tag">MCP</span>
+                        <span class="tag">A2A</span>
+                        <span class="tag">Prompt Engineering</span>
+                    </div>
+                </div>
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="tag">GCP</span>
+                        <span class="tag">AWS</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">Jenkins</span>
+                        <span class="tag">Argo CD</span>
+                    </div>
+                </div>
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-shield-alt"></i> Security & Observability</h3>
+                    <div class="skill-tags">
+                        <span class="tag">OAuth2</span>
+                        <span class="tag">Zero Trust</span>
+                        <span class="tag">DLP</span>
+                        <span class="tag">Splunk</span>
+                        <span class="tag">Datadog</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Certifications -->
+    <section id="achievements" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Certifications & Awards</h2>
+            
+            <div class="certifications-grid" style="margin-bottom: 40px;">
+                <div class="cert-card glass-card">
+                    <div class="cert-icon"><i class="fab fa-google"></i></div>
+                    <h3>Professional Cloud Architect</h3>
+                    <p class="cert-issuer">Google Cloud</p>
+                </div>
+                <div class="cert-card glass-card">
+                    <div class="cert-icon"><i class="fab fa-aws"></i></div>
+                    <h3>Solutions Architect – Associate</h3>
+                    <p class="cert-issuer">Amazon Web Services</p>
+                </div>
+            </div>
+
+            <div class="achievements-list">
+                <div class="achievement-item glass-card">
+                    <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="achievement-content">
+                        <h3>Outstanding Performance Award</h3>
+                        <p class="achievement-date">July 2025</p>
+                        <p>Recognized for end-to-end technical leadership in delivering critical, high-availability enterprise microservices.</p>
+                    </div>
+                </div>
+                <div class="achievement-item glass-card">
+                    <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="achievement-content">
+                        <h3>Outstanding Performance Award</h3>
+                        <p class="achievement-date">September 2024</p>
+                        <p>Awarded for the architecture and enterprise-wide rollout of the shared "Microservice Starter Kit."</p>
+                    </div>
+                </div>
+                <div class="achievement-item glass-card">
+                    <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="achievement-content">
+                        <h3>Outstanding Performance Award</h3>
+                        <p class="achievement-date">November 2022</p>
+                        <p>Earned for engineering an automated Python reporting pipeline that reduced weekly processing time by 60%.</p>
+                    </div>
+                </div>
+                 <div class="achievement-item glass-card">
+                    <div class="achievement-icon"><i class="fas fa-medal"></i></div>
+                    <div class="achievement-content">
+                        <h3>Deloitte IoT Hackathon Finalist</h3>
+                        <p class="achievement-date">2020</p>
+                        <p>Led the design of an AWS-hosted, real-time computer vision system using Python and OpenCV.</p>
+                    </div>
+                </div>
+                <div class="achievement-item glass-card">
+                    <div class="achievement-icon"><i class="fas fa-medal"></i></div>
+                    <div class="achievement-content">
+                        <h3>Deloitte TechnoUtsav Grand Finalist</h3>
+                        <p class="achievement-date">2018</p>
+                        <p>Ranked in the top 0.1% of 9,000+ participants for architecting an ML-powered healthcare application.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-content glass-card">
+                <p>I am currently open to strategic engineering conversations and am always interested in discussing high-level architecture, cloud-native transformations, and agentic AI systems. The best way to reach me is through LinkedIn.</p>
+                
+                <div class="contact-buttons">
+                    <a href="https://www.linkedin.com/in/tariq-ahmad" target="_blank" rel="noopener noreferrer"  class="btn btn-primary">
+                        <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                    </a>
+                    <a href="https://github.com/tariq-ahmad" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        <i class="fab fa-github"></i> View GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-tagline">Lead Software Engineer | Cloud Architect</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/tariq-ahmad" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/tariq-ahmad" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
