@@ -229,17 +229,29 @@ body.dark-mode .code-value { color: #34d399; }
 
 /* Dynamic Tech Ticker */
 .tech-ticker-container { display: flex; justify-content: center; margin-bottom: 40px; min-height: 40px; }
+
+/* Light Mode Styling */
 .tech-ticker {
     display: inline-flex; align-items: center; gap: 10px;
-    background: #1e293b; color: #38bdf8; padding: 8px 20px; border-radius: 30px;
-    font-size: 0.9rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: opacity 0.5s ease;
+    background: var(--glass-bg); 
+    border: 1px solid var(--primary-color); /* Subtle violet border */
+    padding: 8px 20px; border-radius: 30px;
+    font-size: 0.9rem; box-shadow: 0 4px 15px rgba(124, 58, 237, 0.1); 
+    transition: opacity 0.5s ease, background 0.3s ease;
 }
-body.dark-mode .tech-ticker { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); }
-.ticker-term { font-weight: 600; color: #e2e8f0; }
-body.dark-mode .ticker-term { color: var(--highlight-color); }
-.ticker-desc { color: #94a3b8; font-weight: 400; max-width: 600px; font-family: 'Space Grotesk', sans-serif;}
-.tech-ticker i { color: #10b981; }
+.ticker-term { font-weight: 600; color: var(--primary-color); }
+.ticker-desc { color: var(--text-secondary); font-weight: 500; max-width: 600px; font-family: 'Space Grotesk', sans-serif;}
+.tech-ticker i { color: #10b981; } /* Keeps the green prompt icon */
 .ticker-fade { opacity: 0; }
+
+/* Dark Mode Overrides */
+body.dark-mode .tech-ticker { 
+    background: rgba(255, 255, 255, 0.05); 
+    border: 1px solid rgba(255,255,255,0.1); 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+body.dark-mode .ticker-term { color: var(--highlight-color); }
+body.dark-mode .ticker-desc { color: #e5e7eb; font-weight: 400; }
 
 /* Social Links */
 .social-links { display: flex; justify-content: center; gap: 15px; }

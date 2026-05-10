@@ -29,66 +29,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // 2. LIVE Wikipedia API Data Fetching for Tech Ticker
-    // List of Wikipedia article titles related to your expertise
-    const wikiTerms = [
-        'Microservices', 
-        'Distributed_computing', 
-        'Event-driven_architecture', 
-        'Cloud_native_computing', 
-        'Software_architecture', 
-        'Machine_learning',
-        'API_First',
-        'Representational_state_transfer',
-        'Fault_tolerance',
-        'Scalability'
+    // 2. Dynamic Tech Ticker - Architectural Principles
+    const techPrinciples = [
+        { term: "Microservices", desc: "Isolate failure domains and scale independently, don't just split code." },
+        { term: "Event-Driven", desc: "Embrace eventual consistency to decouple services and survive outages." },
+        { term: "Agentic AI", desc: "Keep tool execution deterministic, even when the orchestration is probabilistic." },
+        { term: "Cloud Native", desc: "Architect for ephemeral infrastructure; treat servers as cattle, not pets." },
+        { term: "System Design", desc: "Optimize for maintainability and observability first; scale second." },
+        { term: "Zero Trust", desc: "Never trust the network perimeter; authenticate and authorize every request." }
     ];
 
     const tickerContainer = document.getElementById('tech-ticker');
     const termElement = document.getElementById('ticker-term');
     const descElement = document.getElementById('ticker-desc');
+    let currentTickerIndex = 0;
 
-    async function fetchTechTerm() {
+    function updateTechTicker() {
         // Fade out
         tickerContainer.classList.add('ticker-fade');
         
-        // Pick a random term
-        const randomTerm = wikiTerms[Math.floor(Math.random() * wikiTerms.length)];
-        let displayTitle = randomTerm.replace(/_/g, ' ');
-        let displayDesc = "Architecting for scale, high availability, and fault tolerance.";
-
-        try {
-            // Fetch live summary from Wikipedia REST API
-            const response = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${randomTerm}`);
-            
-            if (response.ok) {
-                const data = await response.json();
-                displayTitle = data.title;
-                
-                // Extract just the first sentence of the Wikipedia summary
-                const firstSentence = data.extract.split('. ')[0] + '.';
-                
-                // Truncate if it's unusually long
-                displayDesc = firstSentence.length > 130 ? firstSentence.substring(0, 127) + '...' : firstSentence;
-            }
-        } catch (error) {
-            console.log("Using fallback term due to fetch error.");
-        }
-
-        // Wait for CSS fade out, update text, then fade in
         setTimeout(() => {
-            termElement.textContent = displayTitle;
-            descElement.textContent = displayDesc;
+            // Update content
+            const currentItem = techPrinciples[currentTickerIndex];
+            termElement.textContent = currentItem.term;
+            descElement.textContent = currentItem.desc;
+            
+            // Increment index
+            currentTickerIndex = (currentTickerIndex + 1) % techPrinciples.length;
+            
+            // Fade in
             tickerContainer.classList.remove('ticker-fade');
         }, 500); 
     }
 
-    // Initial fetch immediately on load
-    fetchTechTerm();
+    // Initial load
+    updateTechTicker();
     
-    // Fetch a new live definition every 9 seconds
-    setInterval(fetchTechTerm, 9000);
-
+    // Cycle every 6 seconds
+    setInterval(updateTechTicker, 6000);
 
     // 3. Smooth Scrolling for Navigation Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
